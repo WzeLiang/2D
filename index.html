@@ -123,7 +123,7 @@
             text += "前后旋转：rotate beta{" + Math.round(event.beta) + "deg)<p>";
             text += "扭转设备：rotate gamma{" + Math.round(event.gamma) + "deg)<p>";
             aaa.innerHTML = text;
-            $(".cube").css("-webkit-transform","rotateX("+ -Math.round(event.beta) + "deg)  rotateY("+ Math.round(event.gamma) +"deg)  rotateZ("+ Math.round(event.alpha) + "deg)");
+            $(".cube").css("-webkit-transform","rotateX("+ -Math.round(event.beta) + "deg)  rotateY("+ Math.round(event.gamma) +"deg)  rotateZ("+ -Math.round(event.alpha) + "deg)");
 
         }
     }
