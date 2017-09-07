@@ -119,11 +119,12 @@
             text += "前后旋转：rotate beta{" + Math.round(event.beta) + "deg)<p>";
             text += "扭转设备：rotate gamma{" + Math.round(event.gamma) + "deg)<p>";
             aaa.innerHTML = text;
+            $(".cube").css("-webkit-transform","rotateX(" + Math.round(event.alpha) + "deg)")
         }
     }
     catch (e) {
         $("#aaa").html(e.message);
-        $(".cube").css("-webkit-transform","rotateX(" + Math.round(event.alpha) + "deg) rotateY(" + Math.round(event.beta) + "deg) rotateZ(" + Math.round(event.gamma) + "deg);")
+
     }
 </script>
 
