@@ -87,13 +87,15 @@
             -webkit-transform: rotateX(-90deg) translateZ(10em);
         }
 
-
+        #arrow{
+            color: white;
+        }
     </style>
 
 </head>
 <body>
 
-
+<p id="arrow"></p>
 <div class="stage">
     <div class="cube">
         <div class="font"></div>
@@ -112,14 +114,15 @@
         function orientationHandler(event) {
             text = ""
             var arrow = document.getElementsByClassName("cube");
+            var aaa = document.getElementById("arrow");
             text += "左右旋转：rotate alpha{" + Math.round(event.alpha) + "deg)<p>";
             text += "前后旋转：rotate beta{" + Math.round(event.beta) + "deg)<p>";
             text += "扭转设备：rotate gamma{" + Math.round(event.gamma) + "deg)<p>";
-            arrow.innerHTML = text;
+            aaa.innerHTML = text;
         }
     }
     catch (e) {
-        $("#arrow").html(e.message);
+        $("#aaa").html(e.message);
         $(".cube").css("  -webkit-transform"," rotateX(' + Math.round(event.alpha) + 'deg) rotateY(' + Math.round(event.beta) + 'deg) rotateZ(' + Math.round(event.gamma) + 'deg);")
     }
 </script>
